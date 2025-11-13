@@ -1,0 +1,20 @@
+{{> head}}
+{{> header}}
+<main>
+    {{#entries}}
+    <article class="h-entry{{#tags}} {{name}}{{/tags}}">
+        {{> post-content}}
+    </article>
+    {{/entries}}
+    {{#pagination.next}}
+    {{#pagination.previous}}
+    <nav class="main-nav">
+        <ul>
+            <li>{{#pagination.next}}<a href="{{url}}">← Older</a>{{/pagination.next}}</li>
+            <li>{{#pagination.previous}}<a href="{{url}}">Newer →</a>{{/pagination.previous}}</li>
+        </ul>
+    </nav>
+    {{/pagination.previous}}
+    {{/pagination.next}}
+</main>
+{{> footer}}

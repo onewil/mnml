@@ -1,0 +1,16 @@
+{{> head}}
+{{> header}}
+<main class="archive">
+    <article>
+        <h1 class="page-title">Posts tagged "{{tag.name}}"</h1>
+        {{#tagged}}
+        <p class="post-date">
+            <a href="{{url}}">{{dateStamp}} →</a>
+        </p>
+        <div class="entry">
+            <p>{{#title}}<b>{{{title}}}:</b>&nbsp;{{/title}}{{{teaser}}}</p>
+        </div>
+        {{/tagged}}
+    </article>
+</main>
+{{> footer}}

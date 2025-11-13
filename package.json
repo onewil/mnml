@@ -1,0 +1,25 @@
+{
+  "name": "mnml-blot",
+  "version": "1.0.0",
+  "blot": {
+    "locals": {
+      "dateFormat": "MMMM D, YYYY"
+    },
+    "partials": {
+      "head": "partials/head.html",
+      "header": "partials/header.html",
+      "footer": "partials/footer.html",
+      "post-content": "partials/post-content.html",
+      "scroll-to-top": "partials/scroll-to-top.html"
+    },
+    "routes": {
+      "/": "entries.html",
+      "/entry": "entry.html",
+      "/archives": "archives.html",
+      "/tagged": "tagged.html"
+    }
+  },
+  "description": "A minimal, responsive theme for Blot converted from the Hugo/Micro.blog mnml theme",
+  "author": "Jim Mitchell (converted to Blot)",
+  "license": "MIT"
+}

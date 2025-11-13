@@ -1,0 +1,30 @@
+{{> head}}
+{{> header}}
+<main class="archive">
+    <article>
+        <h1 class="page-title">Archives</h1>
+        {{#all_tags}}
+        <div class="archive-categories">
+            <div class="category-list">
+                {{#all_tags}}
+                <a href="/tagged/{{slug}}"><button>{{name}}&nbsp;<span class="post-count">({{count}})</span></button></a>
+                {{/all_tags}}
+            </div>
+        </div>
+        {{/all_tags}}
+        {{#archives}}
+        {{#months}}
+        <h3 class="archive-range">{{month}} {{year}}</h3>
+        {{#entries}}
+        <p class="post-date">
+            <a href="{{url}}">{{dateStamp}} →</a>
+        </p>
+        <div class="entry">
+            <p>{{#title}}<b>{{{title}}}:</b>&nbsp;{{/title}}{{{teaser}}}</p>
+        </div>
+        {{/entries}}
+        {{/months}}
+        {{/archives}}
+    </article>
+</main>
+{{> footer}}

@@ -1,0 +1,15 @@
+<header class="header">
+    <nav class="site-nav">
+        <h1 class="site-title"><a href="/"><img id="avatar" class="u-photo" src="{{blog.avatar}}" width="36" height="36" />{{blog.title}}</a></h1>
+        <ul class="nav-menu">
+        {{#blog.menu}}
+            <li class="nav-item"><a href="{{url}}">{{{label}}}</a></li>
+        {{/blog.menu}}
+        </ul>
+        <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </nav>
+</header>

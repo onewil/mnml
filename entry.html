@@ -1,0 +1,42 @@
+{{> head}}
+{{> header}}
+<main>
+    <article class="h-entry{{#entry.tags}} {{name}}{{/entry.tags}}">
+        {{#entry.title}}
+        <h1 class="post-title">{{{entry.title}}}</h1>
+        <p class="post-date">
+            <time class="dt-published" datetime="{{entry.date}}">
+                {{entry.dateStamp}}
+            </time>
+        </p>
+        {{/entry.title}}
+        {{^entry.title}}
+        <p class="post-date btm-margin">
+            <time class="dt-published" datetime="{{entry.date}}">
+                {{entry.dateStamp}}
+            </time>
+        </p>
+        {{/entry.title}}
+        <div class="e-content">
+            {{{entry.html}}}
+        </div>
+        {{#entry.tags}}
+        <p class="categories">
+            {{#entry.tags}}
+            <a href="/tagged/{{slug}}" class="category">{{name}}</a>
+            {{/entry.tags}}
+        </p>
+        {{/entry.tags}}
+    </article>
+    {{#entry.nextEntry}}
+    {{#entry.previousEntry}}
+    <nav class="main-nav">
+        <ul>
+            <li>{{#entry.previousEntry}}<a href="{{url}}">← Older</a>{{/entry.previousEntry}}</li>
+            <li>{{#entry.nextEntry}}<a href="{{url}}">Newer →</a>{{/entry.nextEntry}}</li>
+        </ul>
+    </nav>
+    {{/entry.previousEntry}}
+    {{/entry.nextEntry}}
+</main>
+{{> footer}}

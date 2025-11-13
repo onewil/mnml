@@ -1,0 +1,18 @@
+{{#title}}
+<h2 class="post-title"><a href="{{url}}" class="u-url">{{{title}}}</a></h2>
+<p class="post-date">
+    <time class="dt-published" datetime="{{date}}">
+        {{dateStamp}}
+    </time>
+</p>
+<p>{{{teaser}}}</p>
+<p><a href="{{url}}" class="u-url">Continue reading →</a></p>
+{{/title}}
+{{^title}}
+<p class="post-date btm-margin">
+    <time class="dt-published" datetime="{{date}}">
+        <a href="{{url}}" class="u-url">{{dateStamp}} →</a>
+    </time>
+</p>
+{{{html}}}
+{{/title}}
