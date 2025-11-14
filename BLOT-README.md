@@ -28,8 +28,12 @@ This theme has been converted from Hugo template syntax to Mustache templating f
    - `archives.html` - Archive page template
    - `tagged.html` - Tag archive template
    - `error.html` - 404 error page
+   - `head.html` - Partial for HTML head
+   - `header.html` - Partial for site header
+   - `footer.html` - Partial for site footer
+   - `post-content.html` - Partial for post content
+   - `scroll-to-top.html` - Partial for scroll button
    - `package.json` - Blot configuration
-   - `partials/` directory with all partial templates
    - `css/` directory with stylesheets
    - `js/` directory with JavaScript files
    - `fonts/` directory with GT Web font files
@@ -46,13 +50,15 @@ This theme has been converted from Hugo template syntax to Mustache templating f
 
 ### Partials
 
-Located in the `partials/` directory:
+Located in the root directory (Blot doesn't support subdirectories for templates):
 
 - **head.html** - HTML head with meta tags, fonts, and stylesheets
 - **header.html** - Site header with logo/avatar and navigation menu
 - **footer.html** - Site footer with copyright and credits
 - **post-content.html** - Reusable post content rendering logic
 - **scroll-to-top.html** - Scroll to top button
+
+These partials are included in main templates using `{{> partial-name}}` syntax.
 
 ## Blot Variables Used
 

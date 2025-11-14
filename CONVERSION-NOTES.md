@@ -18,7 +18,7 @@ This document outlines the conversion process from Hugo template syntax to Musta
 
 ### Partials
 
-All Hugo partials in `layouts/partials/` were converted to Mustache partials in the `partials/` directory:
+All Hugo partials in `layouts/partials/` were converted to Mustache partials in the **root directory** (Blot doesn't support subdirectories for templates):
 
 - `head.html` ✓
 - `header.html` ✓
@@ -173,11 +173,11 @@ Potential improvements for future versions:
 - `tagged.html`
 - `error.html`
 - `package.json`
-- `partials/head.html`
-- `partials/header.html`
-- `partials/footer.html`
-- `partials/post-content.html`
-- `partials/scroll-to-top.html`
+- `head.html` (partial)
+- `header.html` (partial)
+- `footer.html` (partial)
+- `post-content.html` (partial)
+- `scroll-to-top.html` (partial)
 
 ### Copied Assets
 - `css/` directory (4 CSS files)
