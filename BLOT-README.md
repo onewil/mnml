@@ -22,21 +22,32 @@ This theme has been converted from Hugo template syntax to Mustache templating f
 ## Installation
 
 1. **Upload to Blot**: Copy all files from this directory to your Blot folder
-2. **Required files**:
-   - `entry.html` - Individual post template
-   - `entries.html` - Homepage/post list template
-   - `archives.html` - Archive page template
-   - `tagged.html` - Tag archive template
-   - `error.html` - 404 error page
-   - `head.html` - Partial for HTML head
-   - `header.html` - Partial for site header
-   - `footer.html` - Partial for site footer
-   - `post-content.html` - Partial for post content
-   - `scroll-to-top.html` - Partial for scroll button
-   - `package.json` - Blot configuration
-   - `css/` directory with stylesheets
-   - `js/` directory with JavaScript files
-   - `fonts/` directory with GT Web font files
+2. **Required files** (Blot uses a flat structure - all template/CSS/JS files in root):
+   - **Templates:**
+     - `entry.html` - Individual post template
+     - `entries.html` - Homepage/post list template
+     - `archives.html` - Archive page template
+     - `tagged.html` - Tag archive template
+     - `error.html` - 404 error page
+   - **Partials:**
+     - `head.html` - Partial for HTML head
+     - `header.html` - Partial for site header
+     - `footer.html` - Partial for site footer
+     - `post-content.html` - Partial for post content
+     - `scroll-to-top.html` - Partial for scroll button
+   - **Stylesheets:**
+     - `fonts.css` - Font declarations
+     - `main.css` - Primary styles
+     - `photos-grid.css` - Photo grid layout
+     - `photos-masonry.css` - Photo masonry layout
+   - **JavaScript:**
+     - `menu.js` - Mobile menu toggle
+     - `copybutton.js` - Code copy button
+     - `scroll-to-top.js` - Scroll button functionality
+     - `search.js` - Search functionality
+   - **Other:**
+     - `package.json` - Blot configuration
+     - `fonts/` directory with GT Web font files (WOFF/WOFF2)
 
 ## Template Structure
 
@@ -101,7 +112,7 @@ This theme uses the following Blot template variables:
 
 ### Changing Colors
 
-Edit `/css/main.css` and modify the CSS variables in the `:root` selector:
+Edit `main.css` (in the root directory) and modify the CSS variables in the `:root` selector:
 
 ```css
 :root {

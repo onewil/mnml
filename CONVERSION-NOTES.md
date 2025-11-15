@@ -179,10 +179,20 @@ Potential improvements for future versions:
 - `post-content.html` (partial)
 - `scroll-to-top.html` (partial)
 
-### Copied Assets
-- `css/` directory (4 CSS files)
-- `js/` directory (4 JavaScript files)
-- `fonts/` directory (8 font files)
+### Stylesheets (in root directory)
+- `fonts.css`
+- `main.css`
+- `photos-grid.css`
+- `photos-masonry.css`
+
+### JavaScript (in root directory)
+- `menu.js`
+- `copybutton.js`
+- `scroll-to-top.js`
+- `search.js`
+
+### Other Assets
+- `fonts/` directory (8 font files - WOFF/WOFF2)
 - `humans.txt`
 
 ### Documentation
