@@ -185,11 +185,13 @@ Potential improvements for future versions:
 - `photos-grid.css`
 - `photos-masonry.css`
 
-### JavaScript (in root directory)
-- `menu.js`
-- `copybutton.js`
-- `scroll-to-top.js`
-- `search.js`
+### JavaScript
+- **Inlined in templates** (to prevent Blot template rendering issues):
+  - Mobile menu toggle → inlined in `footer.html`
+  - Code copy button → inlined in `footer.html`
+  - Scroll to top functionality → inlined in `scroll-to-top.html`
+- **Standalone file**:
+  - `search.js` - Not currently wired up (optional future feature)
 
 ### Other Assets
 - `fonts/` directory (8 font files - WOFF/WOFF2)

@@ -40,14 +40,12 @@ This theme has been converted from Hugo template syntax to Mustache templating f
      - `main.css` - Primary styles
      - `photos-grid.css` - Photo grid layout
      - `photos-masonry.css` - Photo masonry layout
-   - **JavaScript:**
-     - `menu.js` - Mobile menu toggle
-     - `copybutton.js` - Code copy button
-     - `scroll-to-top.js` - Scroll button functionality
-     - `search.js` - Search functionality
    - **Other:**
      - `package.json` - Blot configuration
+     - `search.js` - Search functionality (optional, not currently wired up)
      - `fonts/` directory with GT Web font files (WOFF/WOFF2)
+
+**Note:** JavaScript for mobile menu, code copy button, and scroll-to-top functionality is inlined directly in the HTML templates (`footer.html` and `scroll-to-top.html`) to prevent Blot template rendering issues.
 
 ## Template Structure
 
@@ -65,9 +63,9 @@ Located in the root directory (Blot doesn't support subdirectories for templates
 
 - **head.html** - HTML head with meta tags, fonts, and stylesheets
 - **header.html** - Site header with logo/avatar and navigation menu
-- **footer.html** - Site footer with copyright and credits
+- **footer.html** - Site footer with copyright, credits, and inlined JavaScript (menu toggle, code copy button)
 - **post-content.html** - Reusable post content rendering logic
-- **scroll-to-top.html** - Scroll to top button
+- **scroll-to-top.html** - Scroll to top button with inlined JavaScript
 
 These partials are included in main templates using `{{> partial-name}}` syntax.
 

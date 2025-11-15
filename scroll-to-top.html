@@ -1,2 +1,19 @@
 <button id="scrollToTopBtn">↑</button>
-<script src="/scroll-to-top.js" defer></script>
+<script>
+(function() {
+  let mybutton = document.getElementById("scrollToTopBtn");
+
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      mybutton.style.display = "block";
+    } else {
+      mybutton.style.display = "none";
+    }
+  };
+
+  mybutton.addEventListener("click", function() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+})();
+</script>
