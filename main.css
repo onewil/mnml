@@ -698,6 +698,10 @@ p.categories {
     padding-top: 2rem;
 }
 
+p.categories:empty {
+    display: none;
+}
+
 a.category:link,
 a.category:visited,
 .category-list button {

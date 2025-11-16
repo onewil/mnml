@@ -20,13 +20,11 @@
         <div class="e-content">
             {{{entry.body}}}
         </div>
-        {{#entry.tags}}
         <p class="categories">
             {{#entry.tags}}
             <a href="/tagged/{{slug}}" class="category">{{name}}</a>
             {{/entry.tags}}
         </p>
-        {{/entry.tags}}
     </article>
     {{#entry.nextEntry}}
     {{#entry.previousEntry}}
