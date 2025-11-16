@@ -702,6 +702,11 @@ p.categories:empty {
     display: none;
 }
 
+/* Hide first H1 in content when post already has a title */
+.post-title ~ .e-content > h1:first-child {
+    display: none;
+}
+
 a.category:link,
 a.category:visited,
 .category-list button {
