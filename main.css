@@ -495,6 +495,88 @@ main {
     margin-left: 1.75rem;
 }
 
+/* Sidebar menu */
+#toggle-sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100vh;
+    background: var(--background);
+    z-index: 1000;
+    transition: left 0.3s ease;
+    overflow-y: auto;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+}
+
+#toggle-sidebar.active {
+    left: 0;
+}
+
+body.menu-open::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 999;
+}
+
+#menu-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2.4rem;
+    cursor: pointer;
+    color: var(--text);
+    padding: 0.5rem;
+    line-height: 1;
+}
+
+#menu-close::before {
+    content: '×';
+}
+
+#toggle-sidebar .menu-wrapper {
+    padding: 6rem 2rem 2rem;
+}
+
+#toggle-sidebar .nav-menu {
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#toggle-sidebar .nav-item {
+    margin: 0 0 1rem 0;
+    border-bottom: 1px solid var(--accent-2);
+}
+
+#toggle-sidebar .nav-item a {
+    display: block;
+    padding: 1.2rem 0;
+    text-decoration: none;
+    color: var(--text);
+    font-size: 1.6rem;
+}
+
+#toggle-sidebar .nav-item a:hover {
+    color: var(--link);
+}
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
 article {
     clear: both;
     margin: 0 0 8rem 0;
@@ -1213,58 +1295,10 @@ img.bookshelf__cover {
         font-size: 2rem;
     }
 
-    .site-nav ul {
-        height: 100dvmax;
-        justify-content: start;
-        padding: 4rem 0;
-    }
-
-    .nav-menu {
-        background-color: var(--background);
-        border-radius: 0;
-        flex-direction: column;
-        height: 100dvmax;
-        left: -100%;
-        position: fixed;
-        text-align: center;
-        top: 0;
-        transition: 0.3s;
-        width: 100%;
-        z-index: 10000;
-    }
-
-    .nav-menu.active {
-        left: 0;
-        margin: 0;
-        padding: 10rem 0;
-        top: 0;
-    }
-
-    .nav-item {
-        margin: 1.5rem 0;
-    }
-
     .hamburger {
         cursor: pointer;
         display: block;
-        z-index: 10010;
-    }
-
-    .hamburger.active {
-        position: fixed;
-        right: 20px;
-    }
-
-    .hamburger.active .bar:nth-child(2) {
-        opacity: 0;
-    }
-
-    .hamburger.active .bar:nth-child(1) {
-        transform: translateY(5px) rotate(45deg);
-    }
-
-    .hamburger.active .bar:nth-child(3) {
-        transform: translateY(-5px) rotate(-45deg);
+        z-index: 1001;
     }
 
     .pinned {
