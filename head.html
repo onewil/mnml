@@ -4,10 +4,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
   <meta name="view-transition" content="same-origin" />
   <title>{{#entry}}{{#title}}{{{title}}} | {{/title}}{{/entry}}{{blog.title}}</title>
-  <link rel="preload" href="/fonts/GT-W-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="/fonts/GT-W-Regular-Oblique.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="/fonts/GT-W-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-  <link rel="preload" href="/fonts/GT-W-Bold-Oblique.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
   <meta property="og:title" content="{{#entry}}{{{title}}}{{/entry}}{{^entry}}{{blog.title}}{{/entry}}">
   <meta name="twitter:title" content="{{#entry}}{{{title}}}{{/entry}}{{^entry}}{{blog.title}}{{/entry}}">
   <meta name="twitter:card" content="summary">
@@ -19,7 +15,6 @@
   {{/entry.thumbnail.large}}
   <link rel="canonical" href="{{#entry}}{{url}}{{/entry}}{{^entry}}{{blog.url}}{{/entry}}">
   <link rel="author" href="humans.txt" />
-  <link href="/fonts.css" rel="preload stylesheet" as="style">
   <link href="/main.css" rel="preload stylesheet" as="style">
   <link href="/photos-grid.css" rel="preload stylesheet" as="style">
   <meta name="color-scheme" content="light dark" />
