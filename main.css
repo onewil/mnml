@@ -509,9 +509,10 @@ main {
     background: var(--background);
     z-index: 1000;
     transform: translateX(-100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-y: auto;
-    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.15);
+    border-right: 1px solid var(--accent-2);
 }
 
 #toggle-sidebar.active {
@@ -529,8 +530,14 @@ body.menu-open::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 999;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 #menu-close {
@@ -539,13 +546,21 @@ body.menu-open::before {
     right: 1.5rem;
     background: none;
     border: none;
-    font-size: 3rem;
+    font-size: 2.5rem;
     cursor: pointer;
     color: var(--text);
     padding: 0.5rem;
     line-height: 1;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    border-radius: 50%;
+}
+
+#menu-close:hover {
+    opacity: 1;
+    transform: rotate(90deg);
 }
 
 #menu-close::before {
@@ -557,7 +572,7 @@ body.menu-open::before {
 }
 
 #toggle-sidebar .menu-wrapper {
-    padding: 6rem 2rem 2rem;
+    padding: 6rem 1.5rem 2rem;
 }
 
 #toggle-sidebar .nav-menu {
@@ -568,20 +583,41 @@ body.menu-open::before {
 }
 
 #toggle-sidebar .nav-item {
-    margin: 0 0 1rem 0;
-    border-bottom: 1px solid var(--accent-2);
+    margin: 0 0 0.5rem 0;
 }
 
 #toggle-sidebar .nav-item a {
     display: block;
-    padding: 1.2rem 0;
+    padding: 1rem 1.5rem;
     text-decoration: none;
     color: var(--text);
     font-size: 1.6rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    position: relative;
 }
 
 #toggle-sidebar .nav-item a:hover {
+    background: var(--accent-1);
     color: var(--link);
+    transform: translateX(4px);
+}
+
+#toggle-sidebar .nav-item a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 3px;
+    height: 0;
+    background: var(--link);
+    border-radius: 0 2px 2px 0;
+    transition: height 0.2s ease;
+}
+
+#toggle-sidebar .nav-item a:hover::before {
+    height: 60%;
 }
 
 .screen-reader-text {
